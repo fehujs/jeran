@@ -1,0 +1,43 @@
+{
+  "name": "@fehujs/jeran",
+  "version": "0.1.0",
+  "description": "Fehujs apps command launcher",
+  "main": "build/index.js",
+  "type": "module",
+  "files": [
+    "./build/**/*",
+    "README.md",
+    "LICENCE"
+  ],
+  "exports": {
+    ".": "./build/index.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "build:types": "tsc -d --declarationDir build --declarationMap --emitDeclarationOnly",
+    "release": "pnpm build && pnpm build:types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fehujs/jeran.git"
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "launcher"
+  ],
+  "author": "Pascal LLEONART",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fehujs/jeran/issues"
+  },
+  "homepage": "https://github.com/fehujs/jeran#readme",
+  "devDependencies": {
+    "@fehujs/build": "^0.2.1",
+    "@fehujs/tsconfig": "^1.0.0",
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.2"
+  }
+}
